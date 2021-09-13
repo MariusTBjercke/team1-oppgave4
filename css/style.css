@@ -11,6 +11,41 @@ body {
     font-family: 'Source Code Pro', monospace;
 }
 
+#weapons-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 2vh;
+    width: 300px;
+    margin: auto;
+}
+
+#bombe {
+    background: url('../img/bomb.png');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+}
+
+#pistol {
+    background: url('../img/gun-png.png') no-repeat;
+    width: 100px;
+    height: 50px;
+    background-size: contain;
+}
+
+#kniv {
+    background: url('../img/kniv.png');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+}
+
 .header-wrapper {
     border: 3px dotted #175a5a;
     margin: 3vh 10vh 10vh 10vh;
@@ -28,3 +63,12 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+    padding: 2vh 0 0;
+}
+
+h4 {
+    text-align: center;
+    padding: 2vh 0 0;
+}
