@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+:root {
+    --bg-color: #44A1A0;
+    --header-color: #0D5C63;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: 'Source Code Pro', monospace;
+}
+
+.header-wrapper {
+    border: 3px dotted #175a5a;
+    margin: 3vh 10vh 10vh 10vh;
+    padding: 0 0 2vh 0;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 3em;
+}
+
+h2 {
+    color: var(--header-color);
+    text-align: center;
+}
+
