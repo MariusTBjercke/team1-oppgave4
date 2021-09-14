@@ -1,14 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
 
+@font-face {
+    font-family: retroTitle;
+    src: url('../fonts/Barcade-R4LM.otf');
+}
+
+@font-face {
+    font-family: retroFont;
+    src: url('../fonts/PressStart2P-vaV7.ttf');
+}
+
 :root {
-    --bg-color: #44A1A0;
-    --header-color: #0D5C63;
+    --bg-color: #292929;
+    --header-color: #d9bd3e;
+    --arcade-red: #9d2b1e;
 }
 
 body {
     margin: 0;
     background-color: var(--bg-color);
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'retroFont';
+    color: #ffffff;
+}
+
+.arcade-wrapper {
+    background: url('../img/arcade.png') no-repeat;
+    width: 950px;
+    height: 1539px;
+    position: relative;
+    margin: auto;
+}
+
+.wrapper {
+    left: 140px;
+    top: -10px;
+    height: 700px;
+    position: absolute;
+    max-width: 650px;
+    transform: scale(0.53);
 }
 
 #weapons-container {
@@ -17,10 +46,7 @@ body {
     grid-template-columns: auto auto auto;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
-    padding: 2vh;
-    width: 300px;
-    margin: auto;
+    padding: 3vh;
 }
 
 #bombe {
@@ -29,6 +55,8 @@ body {
     width: 100px;
     height: 100px;
     background-size: contain;
+    cursor: pointer;
+    transition: .7s;
 }
 
 #pistol {
@@ -36,6 +64,10 @@ body {
     width: 100px;
     height: 50px;
     background-size: contain;
+    cursor: pointer;
+    transition: width .7s, height .7s;
+    transform: rotate(-30deg);
+    margin-left: 2vh;
 }
 
 #kniv {
@@ -44,31 +76,107 @@ body {
     width: 100px;
     height: 100px;
     background-size: contain;
+    cursor: pointer;
+    transition: .7s;
 }
 
-.header-wrapper {
-    border: 3px dotted #175a5a;
-    margin: 3vh 10vh 10vh 10vh;
-    padding: 0 0 2vh 0;
+.scoreboard {
+    background: url('../img/scoreboard.png') no-repeat;
+    background-size: cover;
+    overflow: visible;
+    border-radius: .5vh;
+    width: 650px;
+    height: 274px;
+    position: relative;
+    margin: 0 0 2vh 0;
+}
+
+.scoreboard h3 {
+    text-align: start;
+}
+
+.loading {
+    background: url('../img/loading.svg') no-repeat;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    margin: -2vh auto auto auto;
+}
+
+.winner {
+    background: url('../img/winner.svg') no-repeat;
+    width: 640px;
+    height: 640px;
+    background-size: contain;
+    margin: auto;
+}
+
+.loser {
+    background: url('../img/loser.svg') no-repeat;
+    width: 640px;
+    height: 640px;
+    background-size: contain;
+    margin: auto;
+}
+
+.player-score {
+    position: absolute;
+    left: 65px;
+    top: 75px;
+    font-size: 2.5em;
+    color: #ffffff;
+    background-color: inherit;
+}
+
+.bot-score {
+    position: absolute;
+    right: 75px;
+    top: 75px;
+    font-size: 2.5em;
+    color: #ffffff;
+    background-color: inherit;
+}
+
+.round-text {
+    position: absolute;
+    top: 143px;
+    left: 285px;
+    font-size: 3em;
+    color: #ffffff;
+    background-color: inherit;
 }
 
 h1 {
     color: #ffffff;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
+    font-family: retroTitle;
 }
 
 h2 {
     color: var(--header-color);
     text-align: center;
+    padding: 2vh 0 0;
 }
 
 h3 {
     text-align: center;
-    padding: 2vh 0 0;
+    background-color: #ffffff;
+    color: var(--bg-color);
+    padding: 1vh;
+    margin: 2vh auto;
 }
 
 h4 {
     text-align: center;
-    padding: 2vh 0 0;
+    padding: 2vh;
+    background-color: var(--arcade-red);
+    color: #ffffff;
+    letter-spacing: .2em;
+    margin: auto;
+    text-shadow: 3px 3px #530000;
+}
+
+span {
+    font-size: 1.4em;
 }
